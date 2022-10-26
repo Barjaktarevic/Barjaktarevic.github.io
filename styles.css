@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Old+Standard+TT&display=swap');
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+
+html {
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    position: absolute; 
+    z-index: 10;
+    width: 100%;
+}
+
+.navbar p {
+    color: #fff;
+    padding-left: 1%;
+    padding-top: 1%;
+    font-size: 4vh;
+}
+
+.navbar-buttons {
+    padding-right: 1%;
+    padding-top: 1%;
+}
+
+.navbar-buttons button {
+    font-size: 4vh;
+    font-family: inherit;
+}
+
+.main-img {
+    width: 100%;
+    display: inline;
+    height: 80vh;
+    object-fit: cover;
+    z-index: -5;
+    filter: brightness(40%);
+    border-bottom-right-radius: 40vw;
+}
+
+.main-section {
+    position: relative;
+    box-shadow: 0.5vh 0.5vh 2vh 1vh rgba(0,0,0, 0.55);
+    border-bottom-right-radius: 40vw;
+    background-color: rgba(0,0,0, 0.55);
+}
+
+.main-text {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    width: 65%;
+}
+
+.main-text h1 {
+    font-size: 10vh;  
+    font-weight: 300;
+}
+
+.main-text h3 {
+    font-size: 5vh;
+    font-weight: 200;
+}
+
+.snippets {
+    display: flex;
+    width: 100%;
+    height: 30vh;
+    justify-content: space-around;
+}
+
+.snippet {
+    background-color: #fff;
+    width: 28%;
+    height: 90%;
+    border-radius: 5%;
+    margin-top: -2.5%;
+    z-index: 10;
+    box-shadow: 0.5vh 0.5vh 2vh 1vh rgba(0,0,0, 0.25)
+}
+
+.snippet:nth-child(2) {
+    margin-top: -5%;
+}
