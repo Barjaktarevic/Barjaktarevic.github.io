@@ -66,11 +66,19 @@ html {
 .main-text h1 {
     font-size: 10vh;  
     font-weight: 300;
+    animation: main-text 1.5s ease-in;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    transform: translateY(1000%)
 }
 
 .main-text h3 {
     font-size: 5vh;
     font-weight: 200;
+    animation: main-text 1.5s ease-in 0.75s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    transform: translateY(1000%)
 }
 
 .snippets {
@@ -90,6 +98,93 @@ html {
     box-shadow: 0.5vh 0.5vh 2vh 1vh rgba(0,0,0, 0.25)
 }
 
+.snippet:nth-child(1) {
+    animation: snippet-left 1.5s ease-in-out 0.25s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    transform: translateX(-500%)
+}
+
+.snippet:nth-child(3) {
+    animation: snippet-right 1.5s ease-in-out 0.25s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    transform: translateX(500%)
+}
+
 .snippet:nth-child(2) {
     margin-top: -5%;
+    animation: snippet-mid 1.5s ease-in-out 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    transform: translateY(-1000%)
 }
+
+
+
+
+
+
+/* ANIMATIONS */
+
+@keyframes main-text {
+    0% {
+        opacity: 0;
+        transform: translateY(1000%)
+    }
+    50% {
+        opacity: 0.1;
+        transform: translateY(75%)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%)
+    }
+}
+
+@keyframes snippet-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-500%)
+    }
+    50% {
+        opacity: 0.1;
+        transform: translateX(-100%)
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%)
+    }
+}
+
+@keyframes snippet-right {
+    0% {
+        opacity: 0;
+        transform: translateX(500%)
+    }
+    50% {
+        opacity: 0.1;
+        transform: translateX(100%)
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%)
+    }
+}
+
+@keyframes snippet-mid {
+    0% {
+        opacity: 0;
+        transform: translateY(1000%)
+    }
+    50% {
+        opacity: 0.1;
+        transform: translateY(75%)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%)
+    }
+}
+
+/* ANIMATIONS END */
