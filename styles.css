@@ -8,6 +8,7 @@
 
 html {
     font-family: 'Alegreya Sans', sans-serif;
+    overflow-X: hidden;
 }
 
 .navbar {
@@ -66,19 +67,11 @@ html {
 .main-text h1 {
     font-size: 10vh;  
     font-weight: 300;
-    animation: main-text 1.5s ease-in;
-    animation-fill-mode: forwards;
-    opacity: 0;
-    transform: translateY(1000%)
 }
 
 .main-text h3 {
     font-size: 5vh;
     font-weight: 200;
-    animation: main-text 1.5s ease-in 0.75s;
-    animation-fill-mode: forwards;
-    opacity: 0;
-    transform: translateY(1000%)
 }
 
 .snippets {
@@ -90,44 +83,47 @@ html {
 
 .snippet {
     background-color: #fff;
-    width: 28%;
-    height: 90%;
-    border-radius: 5%;
+    width: 30%;
+    height: 92%;
+    border-radius: 3%;
     margin-top: -2.5%;
     z-index: 10;
-    box-shadow: 0.5vh 0.5vh 2vh 1vh rgba(0,0,0, 0.25)
+    box-shadow: 0.5vh 0.5vh 2vh 1vh rgba(0,0,0, 0.25);
+    text-align: center;
 }
 
-.snippet:nth-child(1) {
-    animation: snippet-left 1.5s ease-in-out 0.25s;
-    animation-fill-mode: forwards;
-    opacity: 0;
-    transform: translateX(-500%)
+.snippet .fa-solid {
+    font-size: 5vh;
+    margin-top: 2%;
 }
 
-.snippet:nth-child(3) {
-    animation: snippet-right 1.5s ease-in-out 0.25s;
-    animation-fill-mode: forwards;
-    opacity: 0;
-    transform: translateX(500%)
+.snippet p {
+    margin-top: 4%;
+    font-size: 2.75vh;
+    padding: 0.5vh;
 }
 
 .snippet:nth-child(2) {
     margin-top: -5%;
-    animation: snippet-mid 1.5s ease-in-out 0.5s;
-    animation-fill-mode: forwards;
-    opacity: 0;
-    transform: translateY(-1000%)
+}
+
+.info-section-bg {
+    transform: rotate(-7.5deg);
+    background-color:honeydew;
+    height: 100vh;
+    box-shadow: 0 0 0 100vmax honeydew;
+    clip-path: inset(0 -100vmax);
 }
 
 .info-section {
+    transform: rotate(7.5deg);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .profile-img-container {
-    margin-top: 5%;
+    margin-top: 5.75%;
     width: 59%;
     display: flex;
 }
@@ -162,74 +158,8 @@ html {
 
 .skills-container {
     width: 40%;
-    margin-top: 5%;
+    margin-top: 5.75%;
     border: black 5px solid;
     border-radius: 5%;
     height: 75vh;
 }
-
-
-
-/* ANIMATIONS */
-
-@keyframes main-text {
-    0% {
-        opacity: 0;
-        transform: translateY(1000%)
-    }
-    50% {
-        opacity: 0.1;
-        transform: translateY(100%)
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0%)
-    }
-}
-
-@keyframes snippet-left {
-    0% {
-        opacity: 0;
-        transform: translateX(-500%)
-    }
-    50% {
-        opacity: 0.1;
-        transform: translateX(-100%)
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0%)
-    }
-}
-
-@keyframes snippet-right {
-    0% {
-        opacity: 0;
-        transform: translateX(500%)
-    }
-    50% {
-        opacity: 0.1;
-        transform: translateX(100%)
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0%)
-    }
-}
-
-@keyframes snippet-mid {
-    0% {
-        opacity: 0;
-        transform: translateY(1000%)
-    }
-    50% {
-        opacity: 0.1;
-        transform: translateY(75%)
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0%)
-    }
-}
-
-/* ANIMATIONS END */

@@ -13,7 +13,7 @@
 </head>
 <body>
     <main class="main-section">
-        <nav class="navbar">
+        <nav class="navbar" data-aos="fade-left">
             <p>Made with Vanilla JS and CSS</p>
             <div class="navbar-buttons">
                 <button class="link"><i class="fa-brands fa-facebook"></i></button>
@@ -25,19 +25,31 @@
         
         <img class="main-img" src="emptyclassroom.jpg" alt="empty clasroom">
         <div class="main-text">
-            <h1>Zovem se Uroš Barjaktarević</h1>
-            <h3> ~ i dobrodošli na moju web stranicu ~ </h2>
+            <h1 data-aos="zoom-out-up">Zovem se Uroš Barjaktarević</h1>
+            <h3 data-aos="fade-up" data-aos-delay="600"> ~ i dobrodošli na moju web stranicu ~ </h2>
         </div>
     </main>
 
     <section>
     <div class="snippets">
-        <div class="snippet"></div>
-        <div class="snippet"></div>
-        <div class="snippet"></div>
+        <div class="snippet" data-aos="fade-left" data-aos-delay="1000">
+            <i class="fa-solid fa-user-graduate"></i>
+            <p>Diplomirani sam magistar edukacije engleskog jezika i književnosti i hrvatskog jezika i književnosti na Filozofskom fakultet u Osijeku.
+                Tijekom studija bio sam dobitnik dekanove nagrade i dviju najviših pohvala (summa cum laude).   
+            </p>
+        </div>
+        <div class="snippet" data-aos="fade-up" data-aos-delay="1400">
+            <i class="fa-solid fa-chalkboard-user"></i>
+            <p>Već osam godina radim kao nastavnik Engleskog jezika (Gimnazija Vukovar) i 
+            </p>
+        </div>
+        <div class="snippet" data-aos="fade-right" data-aos-delay="1200">
+            <i class="fa-solid fa-people-roof"></i>
+        </div>
     </div>
     </section>
 
+    <div class="info-section-bg">
     <section class="info-section">
         <div class="profile-img-container">
             <img class="profile-img" src="profile-img.jpg" loading="lazy" alt="profile image" data-aos="flip-left">
@@ -54,6 +66,7 @@
         </div>
         <div class="skills-container"></div>
     </section> 
+    </div>
 
     <section class="contact-me">
     </section>
