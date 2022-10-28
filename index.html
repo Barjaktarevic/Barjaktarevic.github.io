@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="app.js" defer></script>
     <script src="https://kit.fontawesome.com/6c43641683.js" crossorigin="anonymous"></script>
     <title>Personal page | Uroš Barjaktarević</title>
@@ -38,15 +40,15 @@
 
     <section class="info-section">
         <div class="profile-img-container">
-            <img class="profile-img" src="profile-img.jpg" loading="lazy" alt="profile image">
-            <div>
+            <img class="profile-img" src="profile-img.jpg" loading="lazy" alt="profile image" data-aos="flip-left">
+            <div data-aos="flip-right">
                 <h3 class="list-heading">Kratak opis mojih vještina i certifikata</h3>
             <ul class="profile-list">
-                <li>HTML i CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>NodeJS</li>
-                <li>Git</li>
+                <li data-aos="fade-left" data-aos-delay="500">HTML i CSS</li>
+                <li data-aos="fade-left" data-aos-delay="700">JavaScript</li>
+                <li data-aos="fade-left" data-aos-delay="900">React</li>
+                <li data-aos="fade-left" data-aos-delay="1100">NodeJS</li>
+                <li data-aos="fade-left" data-aos-delay="1300">Git</li>
             </ul>
             </div>
         </div>

@@ -162,6 +162,10 @@ html {
 
 .skills-container {
     width: 40%;
+    margin-top: 5%;
+    border: black 5px solid;
+    border-radius: 5%;
+    height: 75vh;
 }
 
 
