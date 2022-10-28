@@ -120,8 +120,49 @@ html {
     transform: translateY(-1000%)
 }
 
+.info-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.profile-img-container {
+    margin-top: 5%;
+    width: 59%;
+    display: flex;
+}
 
+.profile-img {
+    width: 80%;
+    height: 75vh;
+    object-fit: cover;
+    border-radius: 15%;
+}
+
+.list-heading {
+    text-align: center;
+    font-size: 4vh;
+}
+
+.profile-list {
+    width: auto
+}
+
+.profile-list li {
+    list-style: none;
+    text-align: center;
+    font-size: 4vh;
+    margin-top: 15%;
+    margin-right: 15%;
+}
+
+.profile-list li:hover {
+    cursor: pointer;   
+}
+
+.skills-container {
+    width: 40%;
+}
 
 
 
@@ -134,7 +175,7 @@ html {
     }
     50% {
         opacity: 0.1;
-        transform: translateY(75%)
+        transform: translateY(100%)
     }
     100% {
         opacity: 1;
