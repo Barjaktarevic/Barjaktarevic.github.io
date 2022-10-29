@@ -8,3 +8,25 @@ AOS.init({
 })
 
 AOS.init();
+
+const tabs = document.querySelectorAll('[data-tab-target]')
+const sections = document.querySelectorAll('.section')
+
+tabs.forEach(tab =>
+    tab.addEventListener('click', function() {
+        const target = document.querySelector(tab.dataset.tabTarget)
+        sections.forEach(function (section) {
+            section.classList.add('inactive')
+            section.classList.remove('active')
+        })    
+        tabs.forEach(function (tab) {
+            tab.classList.remove('BG')
+        })
+        tab.classList.add('BG')
+        target.classList.remove('inactive')
+        target.classList.add('active')
+        
+    })
+    
+
+)

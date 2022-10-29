@@ -7,8 +7,12 @@
 }
 
 html {
-    font-family: 'Alegreya Sans', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     overflow-X: hidden;
+}
+
+body {
+    background: linear-gradient(to bottom left, white 0%, rgb(105, 79, 40) 100%)
 }
 
 .navbar {
@@ -20,10 +24,11 @@ html {
 }
 
 .navbar p {
-    color: #fff;
+    color: rgba(255,255,255, 0.75);
     padding-left: 1%;
     padding-top: 1%;
-    font-size: 4vh;
+    font-size: 2vh;  
+    cursor: default;
 }
 
 .navbar-buttons {
@@ -34,6 +39,17 @@ html {
 .navbar-buttons button {
     font-size: 4vh;
     font-family: inherit;
+    background: none;
+    color: white;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar a:hover {
+    opacity: 0.60;
 }
 
 .main-img {
@@ -67,11 +83,13 @@ html {
 .main-text h1 {
     font-size: 10vh;  
     font-weight: 300;
+    cursor: default;
 }
 
 .main-text h3 {
     font-size: 5vh;
     font-weight: 200;
+    cursor: default;
 }
 
 .snippets {
@@ -82,10 +100,10 @@ html {
 }
 
 .snippet {
-    background-color: #fff;
+    background: radial-gradient(circle at 15% -30%, rgb(238, 237, 237) 40%, rgb(179, 168, 152) 100%);
     width: 30%;
     height: 92%;
-    border-radius: 3%;
+    border-radius: 3vw;
     margin-top: -2.5%;
     z-index: 10;
     box-shadow: 0.5vh 0.5vh 2vh 1vh rgba(0,0,0, 0.25);
@@ -93,30 +111,28 @@ html {
 }
 
 .snippet .fa-solid {
-    font-size: 5vh;
+    font-size: 8vh;
     margin-top: 2%;
+    color: rgb(93, 77, 63);
+    filter: brightness(120%);
 }
 
 .snippet p {
-    margin-top: 4%;
-    font-size: 2.75vh;
-    padding: 0.5vh;
+    margin: 4%;
+    font-size: 2vh;
+    padding: 1vh;
+    color: darkslategray;
+    border: 5px solid;
+    border-image-source: linear-gradient(to top left, rgb(146, 108, 76) 0%, transparent 45%);
+    border-image-slice: 1;
+    cursor: default;
 }
 
 .snippet:nth-child(2) {
     margin-top: -5%;
 }
 
-.info-section-bg {
-    transform: rotate(-7.5deg);
-    background-color:honeydew;
-    height: 100vh;
-    box-shadow: 0 0 0 100vmax honeydew;
-    clip-path: inset(0 -100vmax);
-}
-
 .info-section {
-    transform: rotate(7.5deg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,15 +145,21 @@ html {
 }
 
 .profile-img {
-    width: 80%;
-    height: 75vh;
+    width: 70%;
+    height: 65vh;
     object-fit: cover;
     border-radius: 15%;
+    margin-top: 5%;
 }
 
 .list-heading {
     text-align: center;
     font-size: 4vh;
+    background-color: rgb(192, 181, 163);
+    border-radius: 1vw;
+    padding: 0.5vw;
+    margin-left: 3%;
+    cursor: default;
 }
 
 .profile-list {
@@ -148,18 +170,62 @@ html {
     list-style: none;
     text-align: center;
     font-size: 4vh;
-    margin-top: 15%;
-    margin-right: 15%;
+    margin-top: 14%;
+    margin-right: 12%;
 }
 
 .profile-list li:hover {
-    cursor: pointer;   
+    cursor: pointer;  
+    filter: brightness(120%);
 }
 
 .skills-container {
     width: 40%;
     margin-top: 5.75%;
-    border: black 5px solid;
     border-radius: 5%;
     height: 75vh;
+}
+
+.active {
+    animation: visible 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.inactive {
+    display: none;
+}
+
+.BG {
+    background-color: rgb(192, 181, 163);
+    border-radius: 1vw;
+}
+
+.section {
+    margin: 5%;
+    font-size: 2vw;
+    text-align: center;
+}
+
+.skills-text {
+    margin-top: 3%;
+    cursor: default;
+}
+
+.skills-header {
+    background-color: rgb(192, 181, 163);
+    border-radius: 1vw;
+}
+
+@keyframes visible {
+    0% {
+        opacity: 0%
+    }
+    1% {
+        opacity: 1%;
+
+    }
+    100% {
+        opacity: 100%;
+        display: block;
+    }
 }

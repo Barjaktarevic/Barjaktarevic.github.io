@@ -14,12 +14,11 @@
 <body>
     <main class="main-section">
         <nav class="navbar" data-aos="fade-left">
-            <p>Made with Vanilla JS and CSS</p>
+            <p>Made with Vanilla JS and CSS | Fully accessible and responsive</p>
             <div class="navbar-buttons">
-                <button class="link"><i class="fa-brands fa-facebook"></i></button>
-                <button class="link"><i class="fa-brands fa-youtube"></i></button>
-                <button class="link"><i class="fa-brands fa-github"></i></button>
-                <button>LIGHT AND DARK MODE BUTTON</button>
+                <button class="link"><a href="https://www.facebook.com/uros.barjaktarevic.9/" target="_blank"><i class="fa-brands fa-facebook"></i></a></button>
+                <button class="link"><a href="https://www.youtube.com/channel/UC_-8sxmGRrBQ_AbzikJbb-A" target="_blank"><i class="fa-brands fa-youtube"></i></a></button>
+                <button class="link"><a href="https://github.com/Barjaktarevic" target="_blank"><i class="fa-brands fa-github"></i></a></button>
             </div>
         </nav>
         
@@ -34,39 +33,60 @@
     <div class="snippets">
         <div class="snippet" data-aos="fade-left" data-aos-delay="1000">
             <i class="fa-solid fa-user-graduate"></i>
-            <p>Diplomirani sam magistar edukacije engleskog jezika i književnosti i hrvatskog jezika i književnosti na Filozofskom fakultet u Osijeku.
+            <p>Na Filozofskom fakultetu u Osijeku diplomirao sam kao magistar hrvatskog i engleskog jezika i književnosti.
                 Tijekom studija bio sam dobitnik dekanove nagrade i dviju najviših pohvala (summa cum laude).   
             </p>
         </div>
         <div class="snippet" data-aos="fade-up" data-aos-delay="1400">
             <i class="fa-solid fa-chalkboard-user"></i>
-            <p>Već osam godina radim kao nastavnik Engleskog jezika (Gimnazija Vukovar) i 
+            <p>Već osam godina radim kao nastavnik Engleskog jezika (Gimnazija Vukovar). 
+                Hobiji su mi učenje stranih jezika, izrada predmeta od drveta i igranje video igara.
             </p>
         </div>
         <div class="snippet" data-aos="fade-right" data-aos-delay="1200">
             <i class="fa-solid fa-people-roof"></i>
+            <p>Porijeklom sam iz Vukovara, ali živim u Osijeku. Sretno sam oženjen i imam jednog sina. </p>
         </div>
     </div>
     </section>
 
-    <div class="info-section-bg">
     <section class="info-section">
         <div class="profile-img-container">
-            <img class="profile-img" src="profile-img.jpg" loading="lazy" alt="profile image" data-aos="flip-left">
+            <img class="profile-img" src="profile-img.jpg" loading="lazy" alt="profile image" data-aos="zoom-in-right">
             <div data-aos="flip-right">
                 <h3 class="list-heading">Kratak opis mojih vještina i certifikata</h3>
             <ul class="profile-list">
-                <li data-aos="fade-left" data-aos-delay="500">HTML i CSS</li>
-                <li data-aos="fade-left" data-aos-delay="700">JavaScript</li>
-                <li data-aos="fade-left" data-aos-delay="900">React</li>
-                <li data-aos="fade-left" data-aos-delay="1100">NodeJS</li>
-                <li data-aos="fade-left" data-aos-delay="1300">Git</li>
+                <li data-aos="fade-left" data-aos-delay="500" data-tab-target="#html" class="BG">HTML i CSS</li>
+                <li data-aos="fade-left" data-aos-delay="700" data-tab-target="#javascript">JavaScript</li>
+                <li data-aos="fade-left" data-aos-delay="900" data-tab-target="#react">React</li>
+                <li data-aos="fade-left" data-aos-delay="1100" data-tab-target="#node">NodeJS</li>
+                <li data-aos="fade-left" data-aos-delay="1300" data-tab-target="#git">Git</li>
             </ul>
             </div>
         </div>
-        <div class="skills-container"></div>
+        <div class="skills-container">
+            <div class="section html active" id="html">
+                <h2 class="skills-header">HTML i CSS</h2>
+                <p class="skills-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, facere! Reiciendis deserunt, a laudantium est necessitatibus dicta dolores atque corrupti amet laborum quasi, maxime mollitia. Consequuntur praesentium, natus sit fugit est nemo, vero maiores nesciunt perspiciatis voluptate neque. Nemo molestias hic at rem iste dolorum optio, laboriosam asperiores quos soluta?</p>
+            </div>
+            <div class="section javascript inactive" id="javascript">
+                <h2 class="skills-header">JavaScript</h2>
+                <p class="skills-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate modi quam quia soluta odit possimus eligendi iusto debitis molestias porro saepe magnam sit cumque provident fugit quibusdam cum omnis non, quas perferendis quaerat aliquid. Quasi, dicta earum iste eveniet quaerat voluptatum sequi, consequatur, quibusdam laudantium aut quas laboriosam illum autem.</p>
+            </div>
+            <div class="section react inactive" id="react">
+                <h2 class="skills-header">React</h2>
+                <p class="skills-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur maiores quasi cupiditate delectus. Rem quod eaque, fuga praesentium aut neque enim doloribus autem facilis aliquid totam deserunt accusantium. Alias odio ullam, voluptatibus nam magnam id ratione, ad eos est sit nostrum labore numquam rerum expedita recusandae in autem vero veniam.</p>
+            </div> 
+            <div class="section node inactive" id="node">
+                <h2 class="skills-header">NodeJS</h2>
+                <p class="skills-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ipsam, aliquam itaque voluptates vero impedit, facere, molestias unde aperiam beatae magni. Quia excepturi quas provident debitis inventore animi culpa sed dignissimos quae tempora, vero vel aut ad qui repellendus perferendis, atque quisquam, odit accusamus obcaecati laboriosam voluptatibus exercitationem minima! Non?</p>
+            </div>
+            <div class="section git inactive" id="git">
+                <h2 class="skills-header">Git</h2>
+                <p class="skills-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio alias fugiat deleniti natus tempora sunt quisquam, laudantium saepe quidem ducimus amet animi cumque expedita reiciendis autem quibusdam officiis hic eum deserunt necessitatibus! Aliquam voluptatem earum unde perspiciatis eum mollitia maxime quod perferendis? Nihil ipsa porro, molestias incidunt quam necessitatibus neque.</p>
+            </div>
+        </div>
     </section> 
-    </div>
 
     <section class="contact-me">
     </section>
