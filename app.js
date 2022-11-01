@@ -27,6 +27,49 @@ tabs.forEach(tab =>
         target.classList.add('active')
         
     })
-    
-
 )
+
+const api_url ="https://randomuser.me/api/?results=5";
+
+async function getapi(url)  {
+    try {
+        const response = await fetch(url);
+        data = await response.json();
+        console.log(data)
+        updateTestmonials(data)
+    } catch(e) {
+        console.log(e)
+    }
+    }
+
+getapi(api_url)
+const quotesArray = ['Brzina kojom ovaj čovjek uči...', 'Nema predanijeg radnika od njega.', 'Ovo nije samo async/await demonstracija, ja sam stvarna osoba!', 'Nećete požaliti ako zaposlite ovog čovjeka.', 'Možda tek počinje, ali ima puno potencijala.', 'Timski igrač.', 'Dobro poznaje strane jezike što je uvijek korisno.', 'Pomogao mi je jednom prilikom s kosačicom.', 'A solidan je, šta ja znam...', 'Radi na sebi svaki dan.', 'Čovjek se ne da vidjeti mjesecima, samo uči kodirati po cijele dane.', 'Oprostite, ali ja ne znam ovu osobu.', 'Kao nastavnik bio je jedan od najboljih i najpouzdanijih.', 'Ima divnu ženu.', 'Ovaj čovjek ne zna što je gubljenje vremena.', 'Viđam ga posvuda u web dev zajednici.', 'Kažu da je jednom potrošio cijelu plaću na 50 udemy tečaja.', 'Da citiram Einsteina: "Zakon je."', 'Ima samo jednu manu: ne zna kad treba odustati', 'Pričaju u narodu da mu je toliko dojadio rad u školi da je spreman na sve.', 'Nema baš neki ukus za glazbu, ali što je, tu je.', 'Ne pije, ne puši, nema poroka, osim što kodira po cijele dane.', 'Živi na 4. katu bez lifta pa ima i dobru kondiciju.', 'Njegov je moto: Nemam moto, što će mi moto?', 'Zaljubljenik u povijest.', 'Jedan od najsigurnijih vozača na cesti.', 'E ček ček, to je onaj lik što vodi podcast "Engleski kroz govorne vježbe"?', "Evo, iskreno, ne znam lika, ali čini se okej.", "Čekajte, zašto sam ja ovdje? Što trebam reći?", "Ma stalno ga viđam na WebDevSimplified, ZTM, Kevin Powell i sličnim kanalima na YouTubeu...", "Kažu da se namjerio biti najbolji up-and-coming web developer 2023. godine.", "Toliko puno kodira da je počeo pisati JSON umjesto Jason na nastavi Engleskog.", "Kad čuje Java, prva asocijacija mu nije otok u Indoneziji.", 'E iskače iz paštete više sa svojim GitHub commits i push requests.', 'Kad misli da je sam, nekad samo uzvikne: "GIIIT".', 'Jedan od rijetkih ljudi koji zna ECMAscript 6 napamet...', 'Napravio mi je par polica za kuću, ali nisam ga vidio kako kodira.', 'Taj će vam i gledanje boje kako se suši pretvoriti u natjecanje...']
+
+const testimonialsSection = document.querySelector('.testimonials')
+
+function updateTestmonials(data) {
+    for (let datum of data.results) {
+        const div = document.createElement('div')
+        div.classList.add('testimonials-container')
+
+        const img = document.createElement('img')
+        img.src = datum.picture.large
+        img.classList.add('testimonials-img')
+        console.log(datum.picture.large)
+
+        const name = document.createElement('p')
+        name.classList.add('testimonials-name')
+        name.innerText = datum.name.first + ' ' + datum.name.last
+
+        const quote = document.createElement('p')
+        quote.classList.add('testimonials-quote')
+        quote.innerText = quotesArray[Math.floor(Math.random() * quotesArray.length)]
+
+        div.appendChild(img)
+        div.appendChild(name)
+        div.appendChild(quote)
+        testimonialsSection.appendChild(div)
+      
+    }    
+ }
+
