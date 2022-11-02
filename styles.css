@@ -72,7 +72,7 @@ body {
     height: 80vh;
     object-fit: cover;
     z-index: -5;
-    filter: brightness(40%);
+    filter: brightness(20%);
     border-bottom-right-radius: 40vw;
 }
 
@@ -377,12 +377,18 @@ body {
     .navbar p {
         font-size: 2vw;  
     }
-
-    .main-text h1 {
-        font-size: 10vw;
+    .main-text {
+        width: 85%;
+        top: 40%;
     }
-    main-text h3 {
-        font-size: 2vw;
+    .main-text h1 {
+        font-size: 7vw;
+    }
+    .main-text h3 {
+        font-size: 3vw;
+    }
+    .main-img {
+        height: 60vh;
     }
     .snippets {
         flex-direction: column;
@@ -392,7 +398,7 @@ body {
         margin-top: 20vh;
     }
     .snippet {
-        width: 85%;
+        width: 75%;
         min-height: 30vh;
     }
 
