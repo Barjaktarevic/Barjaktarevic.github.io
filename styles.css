@@ -392,11 +392,12 @@ body {
         margin-top: 20vh;
     }
     .snippet {
-        width: 65%;
+        width: 85%;
+        min-height: 30vh;
     }
 
     .info-section {
-        margin-top: 30vh;
+        margin-top: 40vh;
         flex-direction: column;
         flex-wrap: wrap;
         width: 99%;
@@ -407,7 +408,11 @@ body {
     .profile-list li, .list-heading {
         font-size: 3vw;
     }
+    .profile-list li {
+        text-align: left;
+    }
     .profile-img {
+        margin: auto;
         width: 40%;
         height: 35vh;
     }
@@ -430,9 +435,15 @@ body {
     }
     .testimonials {
         width: 100%;
+        flex-wrap: wrap;
     }
     .testimonials-name, .testimonials-quote {
         font-size: 2.4vw;
     }
-    
+   
+    .testimonials-img {
+        border-radius: 50%;
+        width: 50%;
+        height: auto;
+    }
 }
