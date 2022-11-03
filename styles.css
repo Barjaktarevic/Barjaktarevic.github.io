@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Old+Standard+TT&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 
 *, *::after, *::before {
     box-sizing: border-box;
@@ -43,6 +43,7 @@ body {
     padding-top: 1%;
     font-size: 2vh;  
     cursor: default;
+    font-family: 'Bangers', cursive;
 }
 
 .navbar-buttons {
@@ -91,32 +92,35 @@ body {
     transform: translate(-50%, -50%);
     color: #fff;
     text-align: center;
-    width: 65%;
+    width: 85%;
 }
 
 .main-text h1 {
-    font-size: 10vh;  
+    font-size: 14vh;  
     font-weight: 300;
     cursor: default;
     color: rgb(210, 201, 186);
+    font-family: 'Bangers', cursive;
 }
 
 .main-text h3 {
-    font-size: 5vh;
+    font-size: 6vh;
     font-weight: 200;
     cursor: default;
     color: rgb(210, 201, 186);
+    font-family: 'Bangers', cursive;
 }
 
 .snippets {
     display: flex;
     width: 100%;
-    height: 30vh;
+    height: 35vh;
     justify-content: space-around;
 }
 
 .snippet {
-    background: radial-gradient(circle at 15% -30%, rgb(238, 237, 237) 40%, rgb(179, 168, 152) 100%);
+    background-color: #DFDBE5;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     width: 30%;
     height: 92%;
     border-radius: 3vw;
@@ -124,41 +128,43 @@ body {
     z-index: 10;
     box-shadow: 0.5vh 0.5vh 2vh 1vh rgba(0,0,0, 0.25);
     text-align: center;
+    filter: brightness(110%);
 }
 
 .snippet .fa-solid {
     font-size: 8vh;
-    margin-top: 2%;
+    margin-top: 1%;
     color: rgb(93, 77, 63);
     filter: brightness(120%);
+    margin-top: 5%;
 }
 
 .snippet p {
-    margin: 4%;
-    font-size: 2vh;
+    margin: 2%;
+    font-size: 3vh;
     padding: 1vh;
     color: darkslategray;
-    border: 5px solid;
-    border-image-source: linear-gradient(to top left, rgb(146, 108, 76) 0%, transparent 45%);
-    border-image-slice: 1;
     cursor: default;
+    font-family: 'Bangers', cursive;
 }
 
 .snippet:nth-child(2) {
     margin-top: -5%;
 }
 
+
 .info-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background: linear-gradient(to right, transparent 0%, rgb(146, 108, 76) 50%, transparent 100%); */
     width: 90%;
     margin: 0 auto;
     border-top: 3vh solid;
     border-bottom: 3vh solid;
     border-image-source: linear-gradient(to right, transparent 0%, rgb(146, 108, 76) 50%, transparent 100%);
     border-image-slice: 1;
+    font-family: 'Bangers', cursive;
+    font-weight: lighter;
 }
 
 .profile-img-container {
@@ -172,6 +178,7 @@ body {
     height: 65vh;
     object-fit: cover;
     border-radius: 15%;
+    box-shadow: 0.5vh 0.5vh 2vh 1vh rgba(0,0,0, 0.25);
 }
 
 .list-heading {
@@ -198,7 +205,9 @@ body {
 
 .profile-list li:hover {
     cursor: pointer;  
-    filter: brightness(120%);
+    filter: brightness(130%);
+    box-shadow: 0.5vh 0.5vh 2vh 1vh rgba(0,0,0, 0.25);
+    border-radius: 1vw;
 }
 
 .skills-container {
@@ -220,6 +229,8 @@ body {
 .BG {
     background-color: rgb(192, 181, 163);
     border-radius: 1vw;
+    filter: brightness(120%);
+    box-shadow: 0.5vh 0.5vh 2vh 1vh rgba(0,0,0, 0.25);
 }
 
 .section {
@@ -251,6 +262,8 @@ body {
     background: linear-gradient(to right, transparent 0%, black 50%, transparent 100%); 
     color:rgb(192, 181, 163);
     cursor: default;
+    font-family: 'Bangers', cursive;
+    font-weight: lighter;
 }
 
 .testimonials {
@@ -287,6 +300,8 @@ body {
     font-size: 2.6vh;
     font-weight: bold;
     cursor: default;
+    font-family: 'Bangers', cursive;
+    font-weight: lighter;
 }
 
 .testimonials-quote {
@@ -304,18 +319,20 @@ body {
     margin: 0 auto;
     width: 90%;
     background: linear-gradient(to right, transparent 0%, black 50%, transparent 100%);
-    height: 40vh;
+    min-height: 60vh;
     color: rgb(192, 181, 163);
 }
 
 .projects-demonstration-text {
     text-align: center;
-    font-size: 4vh;
+    font-size: 7vh;
     cursor: default;
+    font-family: 'Bangers', cursive;
+    margin-top: 1%;
 }
 
 .projects-container {
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
@@ -323,9 +340,14 @@ body {
 }
 
 .footer-span-left, .footer-span-right {
-    font-size: 5vw;
-    margin: 0 5%;
+    font-size: 8vw;
     cursor: default;
+}
+
+.footer-span-left .fa-solid, .footer-span-right .fa-solid {
+    border: double black 5px;
+    border-radius: 50%;
+    color: white;
 }
 
 .footer-span-left:hover, .footer-span-right:hover {
@@ -335,7 +357,7 @@ body {
 }
 
 .project-preview-container {
-    width: 50%;
+    width: 75%;
     display: flex;
     margin: 0 auto;
     justify-content: center;
@@ -343,12 +365,17 @@ body {
 }
 
 .project-preview {
-    margin-top: 5%;
+    margin-top: 3%;
     object-fit: cover;
-    max-height: 30vh;
-    max-width: 25vw;
+    min-height: 50vh;
+    min-width: 25vw;
     padding-bottom: 2vh;
-    border-radius: 3px;
+    border-radius: 1vw;
+}
+
+.project-preview:hover {
+    opacity: 0.75;
+    cursor: pointer;
 }
 
 .project-description {
@@ -358,6 +385,43 @@ body {
     max-width: 10vw;
     cursor: default;
 }
+
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 275%;
+    transform: translate(-50%, -50%);
+    width: 65%;
+    border-radius: 1vh;
+    box-shadow: 0 8px 0 0px var(--light-mode-shadow);
+    text-align: center;
+    border: 5px solid rgb(179, 168, 152);
+    font-family: 'Bangers', cursive;
+    background-color: #DFDBE5;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.65);
+  }
+
+.close-button {
+    position: absolute;
+    right: 2.5%;
+    top: 2.5%;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 1.5em;
+    background-color: #DFDBE5;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.close-button:hover, close-button:focus {
+    opacity: 0.75;
+}
+
 
 @keyframes visible {
     0% {
@@ -379,7 +443,7 @@ body {
     }
     .main-text {
         width: 85%;
-        top: 40%;
+        top: 48%;
     }
     .main-text h1 {
         font-size: 7vw;
@@ -388,14 +452,14 @@ body {
         font-size: 3vw;
     }
     .main-img {
-        height: 60vh;
+        height: 45vh;
     }
     .snippets {
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 8vh;
-        margin-top: 20vh;
+        margin-top: 27.5vh;
     }
     .snippet {
         width: 75%;
@@ -413,9 +477,6 @@ body {
   
     .profile-list li, .list-heading {
         font-size: 3vw;
-    }
-    .profile-list li {
-        text-align: left;
     }
     .profile-img {
         margin: auto;
@@ -451,5 +512,8 @@ body {
         border-radius: 50%;
         width: 50%;
         height: auto;
+    }
+    .projects-demonstration-text {
+        font-size: 5vw;
     }
 }

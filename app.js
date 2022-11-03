@@ -77,8 +77,8 @@ const nextProject = document.querySelector('.footer-span-right')
 const previousProject = document.querySelector('.footer-span-left')
 const projectContainer = document.querySelector('.project-preview-container')
 
-const projectsArrayURLs = ['/progress-tracker.png', '/random-quote-generator.png', '/icecream.png']
-const projectDescriptions = ['Aplikacija za praćenje napretka pri učenju kodiranja (sprema unose u browser).', 'Generator citata (fetch API s GitHuba) s opcijom objave istih na Twitteru.', 'CSS ART: Sladoled napravljen samo u HTML-u i CSS-u.']
+const projectsArrayURLs = ['/progress-tracker.png', '/random-quote-generator.png', '/rock-paper-scissors.png', '/tic-tac-toe.png']
+const projectDescriptions = []
 let counter = 0
 
 function showNextProject() {
@@ -94,7 +94,6 @@ function showNextProject() {
     description.classList.add('project-description')
     description.innerText = projectDescriptions[counter]
     projectContainer.appendChild(image)
-    projectContainer.appendChild(description)
 }
 }
 
@@ -111,9 +110,20 @@ function showPreviousProject() {
     description.classList.add('project-description')
     description.innerText = projectDescriptions[counter]
     projectContainer.appendChild(image)
-    projectContainer.appendChild(description)
 }
 }
 
 nextProject.addEventListener('click', showNextProject)
 previousProject.addEventListener('click', showPreviousProject)
+
+const modal = document.querySelector('.modal')
+const closeButton = document.querySelector('.close-button')
+const projectImage = document.getElementsByClassName('project-preview')
+
+projectContainer.addEventListener('click', function() {
+    modal.showModal()
+})
+
+closeButton.addEventListener('click', function() {
+    modal.close()
+})
