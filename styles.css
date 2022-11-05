@@ -468,7 +468,7 @@ dialog::backdrop {
     }
     .snippet {
         width: 75%;
-        min-height: 24vh;
+        min-height: 29vh;
     }
 
     .snippet p {
@@ -537,6 +537,9 @@ dialog::backdrop {
         min-width: 24vmin;
     }
     .footer {
-        min-height: 40vmin;
+        min-height: 65vmin;
+    }
+    .project-preview-container {
+        margin-top: 8%;
     }
 }
