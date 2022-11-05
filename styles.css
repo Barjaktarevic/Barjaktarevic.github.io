@@ -443,15 +443,18 @@ dialog::backdrop {
     .navbar p {
         font-size: 2vw;  
     }
+    .navbar-buttons button {
+        font-size: 2vh;
+    }
     .main-text {
         width: 85%;
         top: 48%;
     }
     .main-text h1 {
-        font-size: 7vw;
+        font-size: 10vw;
     }
     .main-text h3 {
-        font-size: 3vw;
+        font-size: 5vw;
     }
     .main-img {
         height: 45vh;
@@ -515,6 +518,7 @@ dialog::backdrop {
     .testimonials {
         width: 100%;
         flex-wrap: wrap;
+        margin-bottom: -12vw;
     }
     .testimonials-name, .testimonials-quote {
         font-size: 2.4vw;
@@ -527,5 +531,9 @@ dialog::backdrop {
     }
     .projects-demonstration-text {
         font-size: 5vw;
+    }
+    .project-preview {
+        min-height: 35vmin;
+        min-width: 24vmin;
     }
 }
