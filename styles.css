@@ -468,7 +468,7 @@ dialog::backdrop {
     }
     .snippet {
         width: 75%;
-        min-height: 30vh;
+        min-height: 24vh;
     }
 
     .snippet p {
@@ -476,7 +476,7 @@ dialog::backdrop {
     }
 
     .info-section {
-        margin-top: 40vh;
+        margin-top: 30vh;
         flex-direction: column;
         flex-wrap: wrap;
         width: 99%;
@@ -518,7 +518,7 @@ dialog::backdrop {
     .testimonials {
         width: 100%;
         flex-wrap: wrap;
-        margin-bottom: -12vw;
+        margin-bottom: -8vw;
     }
     .testimonials-name, .testimonials-quote {
         font-size: 2.4vw;
@@ -535,5 +535,8 @@ dialog::backdrop {
     .project-preview {
         min-height: 35vmin;
         min-width: 24vmin;
+    }
+    .footer {
+        min-height: 40vmin;
     }
 }
