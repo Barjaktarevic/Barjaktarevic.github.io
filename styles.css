@@ -464,17 +464,27 @@ dialog::backdrop {
         justify-content: center;
         align-items: center;
         gap: 8vh;
-        margin-top: 27.5vh;
+        margin-top: 20vh;
     }
     .snippet {
-        width: 75%;
-        min-height: 29vh;
+        width: 85%;
+        min-height: 25vh;
     }
 
+    .snippet:nth-child(1) {
+        margin-left: -17.5%;
+    }
+    .snippet:nth-child(2) {
+        margin-right: -17.5%;
+        margin-top: -10%;
+    }   
+    .snippet:nth-child(3) {
+        margin-left: -17.5%;
+        margin-top: -10%;
+    }
     .snippet p {
         font-size: 4.2vw;
     }
-
     .info-section {
         margin-top: 30vh;
         flex-direction: column;
@@ -490,7 +500,7 @@ dialog::backdrop {
 
     .profile-img {
         margin: auto;
-        width: 40%;
+        width: 58%;
         height: 35vh;
     }
     .list-div {
