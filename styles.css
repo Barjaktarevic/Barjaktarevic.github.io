@@ -154,12 +154,11 @@ body {
     margin-top: -5%;
 }
 
-
 .info-section {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     border-top: 3vh solid;
     border-bottom: 3vh solid;
@@ -170,14 +169,13 @@ body {
 }
 
 .profile-img-container {
-    /* margin-top: 2.75%; */
-    width: 59%;
+    width: 40%;
     display: flex;
 }
 
-.profile-img {
+.profile-img img {
     width: 70%;
-    height: 65vh;
+    height: 55vh;
     object-fit: cover;
     border-radius: 15%;
     box-shadow: 0.5vh 0.5vh 2vh 1vh rgba(0,0,0, 0.25);
@@ -193,16 +191,12 @@ body {
     cursor: default;
 }
 
-.profile-list {
-    width: auto
-}
-
 .profile-list li {
     list-style: none;
     text-align: center;
     font-size: 4vh;
-    margin-top: 14%;
-    margin-right: 12%;
+    margin-top: 5vmin;
+    margin-left: -4vmin;
 }
 
 .profile-list li:hover {
@@ -213,8 +207,7 @@ body {
 }
 
 .skills-container {
-    width: 40%;
-    /* margin-top: 2.75%; */
+    width: 37%;
     border-radius: 5%;
     height: 75vh;
 }
@@ -233,17 +226,19 @@ body {
     border-radius: 1vw;
     filter: brightness(120%);
     box-shadow: 0.5vh 0.5vh 2vh 1vh rgba(0,0,0, 0.25);
+    width: 30vmin;
 }
 
 .section {
-    margin: 5%;
-    font-size: 2vw;
+    margin: 9vmin 1vmin;
+    font-size: 2.75vmin;
     text-align: center;
 }
 
 .skills-text {
     margin-top: 3%;
     cursor: default;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .skills-header {
@@ -282,6 +277,7 @@ body {
 }
 
 .testimonials-container {
+    margin: 5vmin auto;
     height: 80%;
     flex: 1;
     display: flex;
@@ -309,11 +305,11 @@ body {
 .testimonials-quote {
     color: black;
     font-style: italic;
-    font-size: 2vh;
+    font-size: 2vmin;
     cursor: default;
 }
 
-.footer {
+.projects-section {
     border-top: 1vh solid;
     border-bottom: 1vh solid;
     border-image-source: linear-gradient(to right, transparent 0%, rgb(179, 168, 152) 50%, transparent 100%);
@@ -325,67 +321,32 @@ body {
     color: rgb(192, 181, 163);
 }
 
-.projects-demonstration-text {
+.mySwiper {
+    margin-top: 5vmin;
+}
+
+.swiper-wrapper {
+    text-align: center;
+}
+
+.project-img img {
+    max-height: 75vmin;
+    max-width: 150vmin;
+    border-radius: 2vmin;
+    border: 4px solid black;
+}
+
+.project-img img:hover {
+    cursor: pointer;
+    opacity: 87.5%;
+}
+
+.projects-title-text {
     text-align: center;
     font-size: 7vh;
     cursor: default;
     font-family: 'Bangers', cursive;
     margin-top: 1%;
-}
-
-.projects-container {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.footer-span-left, .footer-span-right {
-    font-size: 8vw;
-    cursor: default;
-}
-
-.footer-span-left .fa-solid, .footer-span-right .fa-solid {
-    border: double black 5px;
-    border-radius: 50%;
-    color: white;
-}
-
-.footer-span-left:hover, .footer-span-right:hover {
-    scale: 1.1;
-    cursor: pointer;
-    opacity: 0.7;
-}
-
-.project-preview-container {
-    width: 75%;
-    display: flex;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-}
-
-.project-preview {
-    margin-top: 3%;
-    object-fit: cover;
-    min-height: 50vh;
-    min-width: 25vw;
-    padding-bottom: 2vh;
-    border-radius: 1vw;
-}
-
-.project-preview:hover {
-    opacity: 0.75;
-    cursor: pointer;
-}
-
-.project-description {
-    padding: 0.35vh;
-    text-align: center;
-    font-size: 2vh;
-    max-width: 10vw;
-    cursor: default;
 }
 
 .modal {
@@ -438,6 +399,8 @@ dialog::backdrop {
         display: block;
     }
 }
+
+/* ================================== MEDIA QUERIES START ================================== */
 
 @media screen and (max-width: 560px) {
     .navbar p {
@@ -553,3 +516,5 @@ dialog::backdrop {
         margin-top: 8%;
     }
 }
+
+/* ================================== MEDIA QUERIES END ================================== */

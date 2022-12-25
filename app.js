@@ -9,6 +9,20 @@ AOS.init({
 
 AOS.init();
 
+const swiper = new Swiper('.mySwiper', {
+    
+    loop: true,
+
+    pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+    // Navigation arrows
+    navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+}})
+
 const tabs = document.querySelectorAll('[data-tab-target]')
 const sections = document.querySelectorAll('.section')
 
@@ -72,58 +86,3 @@ function updateTestmonials(data) {
       
     }    
  }
-
-const nextProject = document.querySelector('.footer-span-right')
-const previousProject = document.querySelector('.footer-span-left')
-const projectContainer = document.querySelector('.project-preview-container')
-
-const projectsArrayURLs = ['/progress-tracker.png', '/random-quote-generator.png', '/rock-paper-scissors.png', '/tic-tac-toe.png']
-const projectDescriptions = []
-let counter = 0
-
-function showNextProject() {
-    if (projectsArrayURLs.length - 1 > counter) {
-    counter ++
-    while (projectContainer.firstChild) {
-        projectContainer.removeChild(projectContainer.lastChild)
-    }
-    const image = document.createElement('img')
-    const description = document.createElement('p')
-    image.classList.add('project-preview')
-    image.src = projectsArrayURLs[counter]
-    description.classList.add('project-description')
-    description.innerText = projectDescriptions[counter]
-    projectContainer.appendChild(image)
-}
-}
-
-function showPreviousProject() {
-    if (counter !== 0) {
-    counter --
-    while (projectContainer.firstChild) {
-        projectContainer.removeChild(projectContainer.lastChild)
-    }
-    const image = document.createElement('img')
-    const description = document.createElement('p')
-    image.classList.add('project-preview')
-    image.src = projectsArrayURLs[counter]
-    description.classList.add('project-description')
-    description.innerText = projectDescriptions[counter]
-    projectContainer.appendChild(image)
-}
-}
-
-nextProject.addEventListener('click', showNextProject)
-previousProject.addEventListener('click', showPreviousProject)
-
-const modal = document.querySelector('.modal')
-const closeButton = document.querySelector('.close-button')
-const projectImage = document.getElementsByClassName('project-preview')
-
-projectContainer.addEventListener('click', function() {
-    modal.showModal()
-})
-
-closeButton.addEventListener('click', function() {
-    modal.close()
-})

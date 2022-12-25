@@ -9,6 +9,8 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="app.js" defer></script>
     <script src="https://kit.fontawesome.com/6c43641683.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <title>Personal page | Uroš Barjaktarević</title>
 </head>
 <body>
@@ -22,7 +24,7 @@
             </div>
         </nav>
         
-        <img class="main-img" src="emptyclassroom.jpg" alt="empty clasroom">
+        <img class="main-img" src="./images/emptyclassroom.jpg" alt="empty clasroom">
         <div class="main-text">
             <h1 data-aos="zoom-out-up">Zovem se Uroš Barjaktarević</h1>
             <h3 data-aos="fade-up" data-aos-delay="500">   dobrodošli na moju web stranicu  </h3>
@@ -52,38 +54,57 @@
 
     <section class="info-section">
         <div class="profile-img-container">
-            <img class="profile-img" src="profile-img.jpg" loading="lazy" alt="profile image" data-aos="zoom-in-right">
-            <div class="list-div" data-aos="flip-right">
-                <h3 class="list-heading">Kratak opis mojih vještina i certifikata</h3>
-            <ul class="profile-list">
-                <li data-aos="fade-left" data-aos-delay="300" data-tab-target="#html" class="BG">HTML i CSS</li>
-                <li data-aos="fade-left" data-aos-delay="300" data-tab-target="#javascript">JavaScript</li>
-                <li data-aos="fade-left" data-aos-delay="300" data-tab-target="#react">React</li>
-                <li data-aos="fade-left" data-aos-delay="300" data-tab-target="#node">NodeJS</li>
-                <li data-aos="fade-left" data-aos-delay="300" data-aos-offset="100" data-tab-target="#git">Git</li>
-            </ul>
+        
+            <div class="swiper mySwiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide profile-img"><img src="./images/self/1.jpg" alt="A photo of me."></div>
+                  <div class="swiper-slide profile-img"><img src="./images/self/2.jpg" alt="A photo of me."></div>
+                  <div class="swiper-slide profile-img"><img src="./images/self/3.jpg" alt="A photo of me."></div>
+        
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
+
+            <div class="list-div" data-aos="flip-right">
+                    <h3 class="list-heading">Kratak opis mojih vještina i certifikata</h3>
+                <ul class="profile-list">
+                    <li data-aos="fade-left" data-aos-delay="300" data-tab-target="#frontend" class="BG">Frontend</li>
+                    <li data-aos="fade-left" data-aos-delay="300" data-tab-target="#backend">Backend</li>
+                    <li data-aos="fade-left" data-aos-delay="300" data-tab-target="#baze">Baze podataka</li>
+                    <li data-aos="fade-left" data-aos-delay="300" data-tab-target="#dsa">DSA</li>
+                    <li data-aos="fade-left" data-aos-delay="300" data-aos-offset="100" data-tab-target="#ostalo">Ostalo</li>
+                </ul>
+            </div>
+
         <div class="skills-container">
-            <div class="section html active" id="html">
-                <h2 class="skills-header">HTML i CSS</h2>
-                <p class="skills-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, facere! Reiciendis deserunt, a laudantium est necessitatibus dicta dolores atque corrupti amet laborum quasi, maxime mollitia. Consequuntur praesentium, natus sit fugit est nemo, vero maiores nesciunt perspiciatis voluptate neque. Nemo molestias hic at rem iste dolorum optio, laboriosam asperiores quos soluta?</p>
+            <div class="section active" id="frontend">
+                <h2 class="skills-header">Frontend</h2>
+                <p class="skills-text">HTML i CSS (uključujući Flexbox, Grid, responsive design, accessibility). Radio sam s nekoliko CSS frameworks (ponajprije Bootstrap, zatim Tailwind i ponešto Material UI uglavnom u React projektima). <br> Dobro vladam modernim JS-om (uključujući OOP), a izradio sam i nekoliko manjih projekata u TS-u. Znam osnove jQuery-ja, ali se dosad njime nisam služio na nekom ozbiljnijem projektu. <br> Od frontend frameworka radim samo u vanilla Reactu u kojem znam upotrijebiti hooks (useState, useEffect, useRef, useReducer, useContext) te imam kakvo-takvo poznavanje class-based komponenti. Također znam izraditi custom hooks te upotrijebiti React zajedno s Firebaseom.</p>
+                <a href="#">Primjer projekta</a>
             </div>
-            <div class="section javascript inactive" id="javascript">
-                <h2 class="skills-header">JavaScript</h2>
-                <p class="skills-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate modi quam quia soluta odit possimus eligendi iusto debitis molestias porro saepe magnam sit cumque provident fugit quibusdam cum omnis non, quas perferendis quaerat aliquid. Quasi, dicta earum iste eveniet quaerat voluptatum sequi, consequatur, quibusdam laudantium aut quas laboriosam illum autem.</p>
+            <div class="section inactive" id="backend">
+                <h2 class="skills-header">Backend</h2>
+                <p class="skills-text">Svakodnevno koristim NodeJS + Express, iako sam izradio i neke manje projektiće u vanilla Nodeu. Znam raditi HTML sanitizaciju, error handling, MVC pristup te koristim neke relativno ustaljene Node pakete (morgan, dotenv, helmet, JOI, mongoose itd.). Što se tiče Node templatinga služim se samo EJS-om sa željom da u dogledno vrijeme naučim i Pug.<br> Pored Nodea znam se služiti i PHP-jem na osnovnoj razini te sam u jednom projektu koristio i Laravel framework.<br> Također imam rudimentarno znanje Pythona i cilj da u budućnosti savladam Django i Flask.</p>
+                <a href="#">Primjer projekta</a>
             </div>
-            <div class="section react inactive" id="react">
-                <h2 class="skills-header">React</h2>
-                <p class="skills-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur maiores quasi cupiditate delectus. Rem quod eaque, fuga praesentium aut neque enim doloribus autem facilis aliquid totam deserunt accusantium. Alias odio ullam, voluptatibus nam magnam id ratione, ad eos est sit nostrum labore numquam rerum expedita recusandae in autem vero veniam.</p>
+            <div class="section inactive" id="baze">
+                <h2 class="skills-header">Baze podataka</h2>
+                <p class="skills-text">Najbolje se znam služiti MongoDB + mongoose frameworkom, iako sam s Mongom jedno vrijeme radio i bez mongoosea. Svakodnevno upotrebljavam MongoDBCompass za rad na svojim projektima, te se također služim i MongoAtlasom. Sposoban sam raditi CRUD operacije bez većih problema. <br> Pored Monga znam se služiti i MySQL-om (također jedan položen tečaj na Udemyju) u kojem također mogu vršiti CRUD operacije, a ponekad me možete naći i kako rješavam SQL query probleme na raznim stranicama. <br> Konačno, znam se služiti Firebaseom - u kontekstu React projekata - uključujući i postavljanje Firebase pravila, ali imam još dosta prostora za napredak (pogotovo u odnosu na Firebase 9).</p>
             </div> 
-            <div class="section node inactive" id="node">
-                <h2 class="skills-header">NodeJS</h2>
-                <p class="skills-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ipsam, aliquam itaque voluptates vero impedit, facere, molestias unde aperiam beatae magni. Quia excepturi quas provident debitis inventore animi culpa sed dignissimos quae tempora, vero vel aut ad qui repellendus perferendis, atque quisquam, odit accusamus obcaecati laboriosam voluptatibus exercitationem minima! Non?</p>
+            <div class="section inactive" id="dsa">
+                <h2 class="skills-header">DSA</h2>
+                <p class="skills-text"> Znam riješiti početničke probleme koji se mogu pronaći na Leetcodeu i CodeWars (na kojem sam rank 5). Trenutno slušam jedan Udemy tečaj na ovu temu (Colt Steele's Data Structures and Algorithms) te također slušam i radim zadatke za CS50. Svjestan sam da je ovo područje na kojem ću trebati puno više raditi u budućnosti, ali isto tako da bi sad bio gubitak vremena previše se posvetiti apstrakciji dok moram predstaviti konkretne rezultate.
+                </p>
             </div>
-            <div class="section git inactive" id="git">
-                <h2 class="skills-header">Git</h2>
-                <p class="skills-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio alias fugiat deleniti natus tempora sunt quisquam, laudantium saepe quidem ducimus amet animi cumque expedita reiciendis autem quibusdam officiis hic eum deserunt necessitatibus! Aliquam voluptatem earum unde perspiciatis eum mollitia maxime quod perferendis? Nihil ipsa porro, molestias incidunt quam necessitatibus neque.</p>
+            <div class="section inactive" id="ostalo">
+                <h2 class="skills-header">Ostalo</h2>
+                <p class="skills-text">Znam se služiti Gitom (također jedan položen tečaj na Udemyju) te u nešto manju ruku Githubom jer dosad nisam imao previše potrebe dijeliti svoj kod s drugima. Nadam se da ću uskoro moći raditi na kakvim open source projektima pa da ću usavršiti svoje znanje u tom području. <br> Također se služim Git Bashom i Powershellom na Windowsima i bez problema upotrebljavam osnovne komande (cd, ls, rm, mkdir, mv...). <br> Znam deployati projekt na Github pages, Firebase hosting te na neke od alternativa za Heroku poput Railway, Cyclic ili Render. <br> Uz to pokušavam čitati koliko god mogu dokumentacije te pratim YouTube kanale: Traversy Media, Web Dev Simplified, Kevin Powell, the Net Ninja, freeCodeCamp (na čijoj sam stranici položio Responsive Design tečaj i JavaScript tečaj) kako bih proširio svoje znanje.</p> 
             </div>
         </div>
     </section> 
@@ -95,22 +116,31 @@
     </section>
     </div>
 
-    <footer class="footer">
-        <p class="projects-demonstration-text" data-aos="fade-right" data-aos-delay="200">Neki od mojih projekata (klik za detalje!)</p>
-        <div class="projects-container">
-            <span class="footer-span-left" title="Prethodni projekt"><i class="fa-solid fa-circle-left"></i></span>
-            
-            <div class="project-preview-container">
-                <img class="project-preview" src="/progress-tracker.png" />
+    <section class="projects-section">
+        <p class="projects-title-text" data-aos="fade-right" data-aos-delay="200">Neki od mojih projekata (klik za detalje!)</p>
+        
+        <div class="swiper mySwiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide project-img"><img src="./images/projects/1.png"></div>
+              <div class="swiper-slide project-img"><img src="./images/projects/2.png"></div>
+              <div class="swiper-slide project-img"><img src="./images/projects/3.png"></div>
+              <div class="swiper-slide project-img"><img src="./images/projects/4.png"></div>
+    
             </div>
-            <span class="footer-span-right" title="Idući projekt"><i class="fa-solid fa-circle-right"></i></span>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
         </div>
+
         <dialog class="modal">
             <button class="close-button"><i class="fa-regular fa-rectangle-xmark"></i></button>
             <h1 class="modal-title">Opis projekta</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nesciunt eaque sapiente consequuntur at repellendus cum quaerat aliquid omnis, quasi voluptatem veritatis molestias voluptas fugit neque. Deleniti, soluta aliquid facilis enim ullam voluptatem iusto optio.</p>
         </dialog>
-    </footer>
+    </section>
 
     
 </body>
