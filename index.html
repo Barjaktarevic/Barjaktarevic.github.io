@@ -7,14 +7,15 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="app.js" defer></script>
+    <script type="module" src="app.js" defer></script>
     <script src="https://kit.fontawesome.com/6c43641683.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="images/favicon.svg">
     <title>Personal page | Uroš Barjaktarević</title>
 </head>
 <body>
-    <main class="main-section">
+    <main class="main-section" id="page-top">
         <nav class="navbar" data-aos="fade-left">
             <p>Made with Vanilla JS and CSS | Fully accessible and responsive</p>
             <div class="navbar-buttons">
@@ -123,24 +124,62 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides -->
-              <div class="swiper-slide project-img"><img src="./images/projects/1.png"></div>
-              <div class="swiper-slide project-img"><img src="./images/projects/2.png"></div>
-              <div class="swiper-slide project-img"><img src="./images/projects/3.png"></div>
-              <div class="swiper-slide project-img"><img src="./images/projects/4.png"></div>
+              <div class="swiper-slide project-img"><img src="./images/projects/1.png" alt=""></div>
+              <div class="swiper-slide project-img"><img src="./images/projects/2.png" alt=""></div>
+              <div class="swiper-slide project-img"><img src="./images/projects/3.png" alt=""></div>
+              <div class="swiper-slide project-img"><img src="./images/projects/4.png" alt=""></div>
+              <div class="swiper-slide project-img"><img src="./images/projects/5.png" alt=""></div>
+              <div class="swiper-slide project-img"><img src="./images/projects/6.png" alt=""></div>
+              <div class="swiper-slide project-img"><img src="./images/projects/7.png" alt=""></div>
+              <div class="swiper-slide project-img"><img src="./images/projects/8.png" alt=""></div>
+              <div class="swiper-slide project-img"><img src="./images/projects/9.png" alt=""></div>
+              <div class="swiper-slide project-img"><img src="./images/projects/10.png" alt=""></div>
     
             </div>
             <!-- If we need navigation buttons -->
             <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-button-next swiper-button-2"></div>
             <div class="swiper-pagination"></div>
         </div>
 
-        <dialog class="modal">
-            <button class="close-button"><i class="fa-regular fa-rectangle-xmark"></i></button>
-            <h1 class="modal-title">Opis projekta</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nesciunt eaque sapiente consequuntur at repellendus cum quaerat aliquid omnis, quasi voluptatem veritatis molestias voluptas fugit neque. Deleniti, soluta aliquid facilis enim ullam voluptatem iusto optio.</p>
+        <dialog class="modal" data-modal>
+            <button class="close-button" data-modal-close><i class="fa-regular fa-rectangle-xmark"></i></button>
+            <h1 class="modal-title" data-modal-title>Opis projekta</h1>
+            <p class="modal-description" data-modal-description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nesciunt eaque sapiente consequuntur at repellendus cum quaerat aliquid omnis, quasi voluptatem veritatis molestias voluptas fugit neque. Deleniti, soluta aliquid facilis enim ullam voluptatem iusto optio.</p>
+            <p data-modal-tags></p>
         </dialog>
     </section>
+
+    <section class="contact-section" data-aos="flip-up">
+
+            <div class="form-explanation-container">
+                <p>Ako želite stupiti u kontakt sa mnom radi kakvih ponuda, prijedloga ili upita, slobodno ispunite obrazac zdesna. Hvala!</p>
+                <hr class="hr-style-one">
+                <small>Vaše kontaktne informacije neće biti dostupne nikome osim meni.</small>
+            </div>
+        
+            <div class="form-container">
+                <h2 class="contact-form-title">Pošaljite mi email!</h2>
+                <form class="contact-form" action="https://formspree.io/f/xdojrrrl" method="POST">
+                    <input type="text" name="Name" placeholder="Vaše ime" required>
+                    <input type="email" name="Email" placeholder="Vaš email" required pattern="\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b">
+                    <label for="query-type">S kojom mi namjerom pišete?</label>
+                    <select name="Type of query" id="query-type" required>
+                        <option value="Ponuda za suradnju" selected>Ponuda za suradnju</option>
+                        <option value="Upit">Upit</option>
+                        <option value="Pohvala ili kritika">Pohvala ili kritika</option>
+                        <option value="Ostalo">Ostalo</option>
+                    </select>
+                    <textarea name="Message" cols="30" rows="10" placeholder="Vaša poruka ovdje" required></textarea>
+                    <button type="submit" class="submit-button">Pošalji</button>
+                </form>
+            </div>
+        
+    </section>
+
+    <footer>
+        <p>Barjaktarević 2023 &nbsp;&nbsp;&nbsp;•<a href="https://github.com/Barjaktarevic/Barjaktarevic.github.io">&nbsp;&nbsp;&nbsp;Link to page source code&nbsp;&nbsp;&nbsp;•</a> <a href="#page-top">&nbsp;&nbsp;&nbsp; Povratak na vrh stranice</a></p>
+    </footer>
 
     
 </body>

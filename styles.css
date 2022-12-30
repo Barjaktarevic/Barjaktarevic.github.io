@@ -10,10 +10,11 @@ html {
     font-family: 'Times New Roman', Times, serif;
     overflow-X: hidden;
     letter-spacing: 1px;
+    scroll-behavior: smooth;
 }
 
 body {
-    background: linear-gradient(to bottom left, white 0%, rgb(105, 79, 40) 100%);
+    background: linear-gradient(to bottom left, white 0%, #694f28 100%);
     overflow-x: hidden;
 }
 
@@ -264,7 +265,6 @@ body {
 }
 
 .testimonials {
-    background: linear-gradient(to right, transparent 0%, rgb(192, 181, 163) 50%, transparent 100%);
     width: 85%;
     min-height: 25vh;
     margin: 0 auto;
@@ -310,15 +310,14 @@ body {
 }
 
 .projects-section {
-    border-top: 1vh solid;
-    border-bottom: 1vh solid;
-    border-image-source: linear-gradient(to right, transparent 0%, rgb(179, 168, 152) 50%, transparent 100%);
+    border-image-source: linear-gradient(to right, rgb(126, 106, 89) -20%, black 100%);
     border-image-slice: 1;
+    border-top: 12px solid;
     margin: 0 auto;
-    width: 90%;
-    background: linear-gradient(to right, transparent 0%, black 50%, transparent 100%);
+    padding: 6vh 0;
+    background: linear-gradient(to right, transparent 0%, black 100%);
     min-height: 60vh;
-    color: rgb(192, 181, 163);
+    color: #c0b5a3;
 }
 
 .mySwiper {
@@ -327,6 +326,23 @@ body {
 
 .swiper-wrapper {
     text-align: center;
+}
+
+.swiper-button-prev::after, .swiper-button-prev::before {
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.swiper-button-next::after, .swiper-button-next::before {
+    color:  black;
+}
+
+.swiper-button-2::after, .swiper-button-2::before {
+    color:  rgb(192, 181, 163);
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    background-color: white;
+    scale: 1.5;
 }
 
 .project-img img {
@@ -350,18 +366,27 @@ body {
 }
 
 .modal {
-    position: absolute;
+    position: fixed;
     left: 50%;
-    top: 275%;
+    top: 50%;
     transform: translate(-50%, -50%);
-    width: 65%;
+    width: 35%;
     border-radius: 1vh;
     box-shadow: 0 8px 0 0px var(--light-mode-shadow);
     text-align: center;
-    border: 5px solid rgb(179, 168, 152);
+    border: 5px solid #b3a898;
     font-family: 'Bangers', cursive;
     background-color: #DFDBE5;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.modal-title {
+    font-size: 4.5vmin;
+}
+
+.modal-description {
+    padding: 3vmin;
+    font-size: 3.5vmin;
 }
 
 dialog::backdrop {
@@ -383,6 +408,115 @@ dialog::backdrop {
 
 .close-button:hover, close-button:focus {
     opacity: 0.75;
+}
+
+.contact-section {
+    padding: 3vmin 5vmin;
+    color: rgb(179, 168, 152);
+    margin: 0 auto;
+    padding-top: 8vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 3px;
+    background: linear-gradient(70deg, black 0%, rgb(146, 108, 76) 100%);
+    border-image-source: linear-gradient(to left, rgb(138, 98, 63) -20%, black 100%);
+    border-image-slice: 1;
+    border-top: 12px solid;
+    padding-bottom: 8vh;
+}
+
+.form-container {
+    margin: 0 auto;
+    width: 75%;
+    padding: 4vmin;
+    background-color: rgba(0, 0, 0, 0.45);
+    border: 4px solid rgb(146, 108, 76);
+    border-radius: 1vh;
+}
+
+.contact-form-title {
+    text-align: center;
+    font-size: 6vmin;
+}
+
+.form-explanation-container {
+    padding: 1vmin;
+    text-align: center;
+}
+
+.hr-style-one {
+    background-color:rgb(93, 77, 63);
+    height: 5px;
+    margin: 3vmin 0;
+}
+
+.form-explanation-container p {
+    font-size: 3.25vmin;
+    margin-top: 28.5%;
+}
+
+.form-explanation-container p::first-letter {
+    font-size: 5vmin;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form * {
+    margin-top: 1vmin;
+    font-family: inherit;
+    text-align: center;
+    font-size: 2.75vmin;
+    border-radius: 1vmin;
+    letter-spacing: inherit;
+}
+
+.contact-form select {
+    color: black;
+}
+
+.submit-button {
+    width: fit-content;
+    padding: 1vmin 3vmin;
+    margin: 1vmin auto;
+}
+
+.submit-button:hover {
+    cursor: pointer;
+    opacity: 90%;
+}
+
+.contact-form input:active, .contact-form input:focus, .contact-form input:hover,
+.contact-form textarea:active, .contact-form textarea:focus, .contact-form textarea:hover,
+.contact-form select:active, .contact-form select:focus, .contact-form select:hover {
+    background-color: rgb(179, 168, 152);
+    color: black;
+}
+
+footer {
+    background-color: black;
+    width: 100%;
+    height: 6vmin;
+    font-family: Bangers, cursive;
+    line-height: 6vmin;
+}
+
+footer p {
+    color: rgb(192, 181, 163);
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer a:hover {
+    cursor: pointer;
+    opacity: 80%;
 }
 
 
