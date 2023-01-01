@@ -623,7 +623,7 @@ footer a:hover {
         font-size: 3vw;
     }
     .testimonials-div-with-heading-text {
-        font-size: 3.5vw;
+        font-size: 5.5vmin;
     }
     .testimonials {
         width: 100%;
@@ -632,7 +632,7 @@ footer a:hover {
         gap: 1vmin;
     }
     .testimonials-name, .testimonials-quote {
-        font-size: 2.4vw;
+        font-size: 5.75vmin;
     }
    
     .testimonials-img {
@@ -656,7 +656,7 @@ footer a:hover {
 
     .project-img img {
         height: 100%;
-        width: 100%;
+        width: 97.5%;
         object-fit: contain;
     }
     .modal {
@@ -675,6 +675,7 @@ footer a:hover {
     }
     .projects-section {
         padding: 1vh 0;
+        min-height: fit-content;
     }
     .profile-img img {
         width: 95%;
