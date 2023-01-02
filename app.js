@@ -86,105 +86,24 @@ function updateTestmonials(data) {
     }    
  }
 
-//  Projekti
- const projects = [
-    {
-        title: "Captain's blog",
-        description: 'Moj najozbiljniji projekt dosad na kojem sam radio oko tri mjeseca. Riječ je o full-stack aplikaciji za pisanje SF kratkih priča. Sadrži sljedeće funkcionalnosti: PassportJS login i signup uz verifikaciju emailom, pet različitih modela u bazi podataka koji se međusobno referiraju, posts & comments sustav, HTML sanitizaciju i brojne druge. Možete testirati na linku ispod.',
-        tags: ["node", "express", "ejs", "full-stack", "mongoDB", "mongoose", "CSS"],
-        link: "",
-    },
-    {
-        title: 'Tic-tac-toe',
-        description: 'Moj prvi teži projekt kojeg sam izradio mjesec i pol dana nakon početka učenja kodiranja. Spaghetti code all over the place - sve je izrađeno uz pomoć if/else clauses, ali sve radi bez ikakvih bugova. Link na igru ispod.',
-        tags: ["HTML", "CSS", "JS"],
-        link: "",
-    },
-    {
-        title: 'Progress tracker',
-        description: 'Prva aplikacija koju sam izradio za vlastiti potrebe kako bih pratio napredak u učenju. Pamti unose u local storage i ima light i dark mode koje sam izradio u potpunosti iz ničega.',
-        tags: ["HTML", "CSS", "JS"],
-        link: "https://barjaktarevic.github.io/progress-tracker/",
-    },
-    {
-        title: 'Quote generator',
-        description: 'Prva aplikacija kojom sam želio uvježbati fetch API i async/await. Poslužila je i kao vježba za upotrebu animiranih SVG loadera.',
-        tags: ["HTML", "CSS", "JS","APIs"],
-        link: "https://barjaktarevic.github.io/Quote-generator/",
-    },
-    {
-        title: 'Rock paper scissors lizard spock',
-        description: 'Ovo je bila jedina "prava" aplikaciju koju sam napravio prije nego što sam počeo gore-spomenuti tic-tac-toe. Pratio sam tutorial na YouTubeu, ali sam na kraju dodao svoju funkcionalnost.',
-        tags: ["HTML", "CSS", "JS"],
-        link: "",
-    },
-    {
-        title: 'Weather App',
-        description: 'Još jedna aplikaciju za vježbu fetch API-ja; ovaj put puno kompleksnija od generatora citata. Također koristi HTML template cloning, malo kompleksnije switch statements i općenito puno više funkcija od ostalih aplikacija.',
-        tags: ["HTML", "CSS", "JS", "APIs"],
-        link: "https://barjaktarevic.github.io/Weather-App/",
-    },
-    {
-        title: 'Memory Game',
-        description: 'Moj prvi React projekt za koji mogu reći da sam ga napravio bez neke veće pomoći tutorijala. Napravljen u jeku Svjetskog prvenstva u nogometu. Možete testirati na linku ispod kao i sve ostale projekte.',
-        tags: ["React", "JS"],
-        link: "https://barjaktarevic.github.io/memory-game/",
-    },
-    {
-        title: 'Todo app',
-        description: 'Moj prvi TypeScript projekt napravljen uz pomoć Snowpack bundlera. Ima funkcionalnost dodavanja i brisanja zadataka, označavanja zadataka završenim i aktivnim te koristi OOP pristup za generaciju zadataka. Međutim, s obzirom na to da mi je ovo bio prvi pokušaj s bundlerom, nisam dobro odradio Github pages deployment, iako znam gdje sam pogriješio, tako da ovaj projekt nije javno dostupan.',
-        tags: ["TypeScript", "HTML", "CSS", "Snowpack"],
-        link: "",
-    },
-    {
-        title: 'Book Landing Page',
-        description: 'Prvi projekt izrađen uz pomoć Bootstrapa kao vježba.',
-        tags: ["HTML", "Bootstrap"],
-        link: "https://barjaktarevic.github.io/Book-landing-page-1/",
-    },
-    {
-        title: 'Book Landing page 2',
-        description: 'Drugi projekt izrađen uz pomoć Bootstrapa, također kao samostalna vježba.',
-        tags: ["HTML", "Bootstrap"],
-        link: "https://barjaktarevic.github.io/Book-landing-page-2/",
-    },
-    {
-        title: 'Infinite scroll page',
-        description: 'Još jedan od nekoliko fetch API projekata, međutim ovaj upotrebljava i nešto JS-a kako bi odredio položaj scroll bara na stranici i generirao dodatni sadržaj po potrebi. Također prvi projekt koja imi hamburger menu u gornjem lijevom kutu.',
-        tags: ["HTML", "CSS", "JS", "APIs"],
-        link: "https://barjaktarevic.github.io/Infinite-scroll/",
-    },
-    // {
-    //     title: 'Web Blog',
-    //     description: '',
-    //     tags: ["React", "CSS Modules", "Firebase"],
-    //     link: "",
-    // },
-    {
-        title: 'Form Validator',
-        description: 'Jedan manji projekt za validaciju obrazaca koji upotrebljava malo ekstenzivniji HTML i Regex (Regex obrasce iz ovog projekta koristim i u brojnim drugim projektima za front-end validation).',
-        tags: ["HTML", "CSS", "JS"],
-        link: "https://barjaktarevic.github.io/Form-Validator/",
-    },
-]
-
-
  let images = [...document.querySelectorAll('.project-img')]
- let modal = document.querySelector('[data-modal]')
- let closeButton = document.querySelector('[data-modal-close]')
+
+ let modal = [...document.querySelectorAll('[data-modal]')]
+ let closeButton = [...document.querySelectorAll('[data-modal-close]')]
  let modalTitle = document.querySelector('[data-modal-title]')
  let modalDescription = document.querySelector('[data-modal-description]')
  let modalTags = document.querySelector('[data-modal-tags]')
+ let modalProjectLinks = document.querySelector('[data-project-link]')
 
- for (let i = 0; i < projects.length; i ++) {
+for (let i = 1; i < images.length -2; i++) {
     images[i] && images[i].addEventListener('click', () => {
-        modalTitle.innerText = projects[i].title
-        modalDescription.innerText = projects[i].description
-        modalTags.innerText = projects[i].tags
-        modal.showModal()
+    
+        modal[i-1].showModal()
     })
- }
+    closeButton[i-1].addEventListener('click', () => {
+        modal[i-1].close()
+     })
+}
 
- closeButton.addEventListener('click', () => {
-    modal.close()
- })
+
+ 

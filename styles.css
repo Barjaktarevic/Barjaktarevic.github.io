@@ -544,6 +544,12 @@ footer a:hover {
     opacity: 80%;
 }
 
+.modal-project-link {
+    font-size: 3vmin;
+    display: block;
+    padding: 1vmin;
+}
+
 
 @keyframes visible {
     0% {
