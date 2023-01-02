@@ -90,20 +90,30 @@ function updateTestmonials(data) {
 
  let modal = [...document.querySelectorAll('[data-modal]')]
  let closeButton = [...document.querySelectorAll('[data-modal-close]')]
- let modalTitle = document.querySelector('[data-modal-title]')
- let modalDescription = document.querySelector('[data-modal-description]')
- let modalTags = document.querySelector('[data-modal-tags]')
- let modalProjectLinks = document.querySelector('[data-project-link]')
 
-for (let i = 1; i < images.length -2; i++) {
-    images[i] && images[i].addEventListener('click', () => {
-    
-        modal[i-1].showModal()
+let projectImage0 = document.querySelector('#project0')
+let projectImage1 = document.querySelector('#project1')
+let projectImage2 = document.querySelector('#project2')
+let projectImage3 = document.querySelector('#project3')
+let projectImage4 = document.querySelector('#project4')
+let projectImage5 = document.querySelector('#project5')
+let projectImage6 = document.querySelector('#project6')
+let projectImage7 = document.querySelector('#project7')
+let projectImage8 = document.querySelector('#project8')
+let projectImage9 = document.querySelector('#project9')
+let projectImage10 = document.querySelector('#project10')
+let projectImage11 = document.querySelector('#project11')
+
+let projectImages = [projectImage0, projectImage1, projectImage2, projectImage3, projectImage4, projectImage5, projectImage6, projectImage7, projectImage8, projectImage9, projectImage10, projectImage11]
+console.log(projectImages)
+
+for (let i = 0; i < projectImages.length; i++) {
+    projectImages[i].addEventListener('click', () => {
+        modal[i].showModal()
     })
-    closeButton[i-1].addEventListener('click', () => {
-        modal[i-1].close()
+    closeButton[i].addEventListener('click', () => {
+        modal[i].close()
      })
 }
-
 
  
