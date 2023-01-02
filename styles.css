@@ -215,6 +215,10 @@ body {
     height: 75vh;
 }
 
+.skills-container p:nth-of-type(2) {
+    margin-top: 1.5vmin;
+}
+
 .active {
     animation: visible 1.5s;
     animation-fill-mode: forwards;
@@ -239,9 +243,14 @@ body {
 }
 
 .skills-text {
-    margin-top: 3%;
+    margin-top: 2%;
     cursor: default;
     font-family: 'Times New Roman', Times, serif;
+    font-size: 2.45vmin;
+    border: 4px solid rgba(0, 0, 0, 0.45);
+    padding: 0.85vmin;
+    background-color: rgba(0,0,0, 0.10);
+    border-radius: 1vmin;
 }
 
 .skills-header {
@@ -250,16 +259,17 @@ body {
 }
 
 .testimonials-div-with-heading {
-    width: 85%;
+    width: 100%;
     margin: 0 auto;
+    padding: 0 1vmin;
 }
 
 .testimonials-div-with-heading-text {
-    font-size: 6.5vh;
+    font-size: 9vmin;
     text-align: center;
     margin-top: 5%;
     font-weight: bold;
-    background: linear-gradient(to right, transparent 0%, black 50%, transparent 100%); 
+    background: linear-gradient(to right, transparent -20%, black 50%, transparent 120%); 
     color:rgb(192, 181, 163);
     cursor: default;
     font-family: 'Bangers', cursive;
@@ -375,6 +385,7 @@ body {
     cursor: default;
     font-family: 'Bangers', cursive;
     margin-top: 1%;
+    background: linear-gradient(to right, transparent 0%, black 100%);
 }
 
 .modal {
@@ -435,7 +446,7 @@ dialog::backdrop {
     border-image-source: linear-gradient(to left, rgb(138, 98, 63) -20%, black 100%);
     border-image-slice: 1;
     border-top: 12px solid;
-    padding-bottom: 8vh;
+    padding-bottom: 8vmin;
 }
 
 .form-container {
@@ -514,11 +525,13 @@ footer {
     height: fit-content;
     font-family: Bangers, cursive;
     line-height: 6vmin;
+   
 }
 
 footer p {
     color: rgb(192, 181, 163);
     text-align: center;
+    padding: 0 4vmin;
 }
 
 footer a {
@@ -635,7 +648,7 @@ footer a:hover {
     .testimonials-container {
         border: 2px solid rgba(0, 0, 0, 0.45);
         background-color: rgba(0,0,0, 0.10);
-        padding: 0.5vmin;
+        padding: 0.6vmin;
         border-radius: 1vmin;
     }
 
@@ -658,6 +671,11 @@ footer a:hover {
         width: 13.5vmin;
         height: 13.5vmin;
     }
+
+    .testimonials-container:nth-of-type(4), .testimonials-container:nth-of-type(5) {
+        display: none;
+    }
+
     .project-img img {
         height: 100%;
         width: 97.5%;
@@ -677,8 +695,18 @@ footer a:hover {
         font-size: 3.25vmin;
         margin-top: 5%;
     }
+
+    .form-container {
+        margin: 5vmin auto;
+        width: 100%;
+        padding: 2vmin;
+        background-color: rgba(0, 0, 0, 0.45);
+        border: 4px solid rgb(146, 108, 76);
+        border-radius: 1vh;
+    }
+
     .projects-section {
-        padding: 12.5vmin 0;
+        padding: 8.5vmin 0;
         min-height: fit-content;
     }
     .profile-img img {
@@ -690,7 +718,7 @@ footer a:hover {
         padding: 5vmin 0;
     }
     .projects-title-text {
-        font-size: 7vmin;
+        font-size: 6vmin;
     }
 }
 /* ================================== MEDIA QUERIES END ================================== */
