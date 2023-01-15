@@ -54,7 +54,7 @@
       />
       <div class="main-text">
         <h1 data-aos="zoom-out-up">Zovem se Uroš Barjaktarević</h1>
-        <h3 data-aos="fade-up" data-aos-delay="500">
+        <h3 data-aos="fade-up" data-aos-delay="500" data-subtitle title="Click me">
           dobrodošli na moju web stranicu
         </h3>
       </div>
@@ -110,12 +110,15 @@
           <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide profile-img">
+              <p style="margin-bottom: 1vmin">Safari u zoološkom vrtu u Osijeku</p>
               <img src="./images/self/1.jpg" alt="A photo of me." />
             </div>
             <div class="swiper-slide profile-img">
+              <p style="margin-bottom: 1vmin">Na Zakynthosu kontempliram zašto nisam počeo kodirati ranije</p>
               <img src="./images/self/2.jpg" alt="A photo of me." />
             </div>
             <div class="swiper-slide profile-img">
+              <p style="margin-bottom: 1vmin">Na radnom mjestu</p>
               <img src="./images/self/3.jpg" alt="A photo of me." />
             </div>
           </div>
@@ -163,7 +166,7 @@
 
       <div class="skills-container">
         <div class="section active" id="frontend">
-          <h2 class="skills-header">Frontend</h2>
+          <h2 class="skills-header">Frontend &nbsp; <i class="fa-brands fa-html5"></i>  &nbsp; ‣  &nbsp; <i class="fa-brands fa-css3-alt"></i>&nbsp; ‣  &nbsp; <i class="fa-brands fa-react"></i></h2>
           <p class="skills-text">
             HTML i CSS (uključujući Flexbox, Grid, responsive design,
             accessibility). Radio sam s nekoliko CSS frameworks (ponajprije
@@ -188,7 +191,7 @@
           </p>
         </div>
         <div class="section inactive" id="backend">
-          <h2 class="skills-header">Backend</h2>
+          <h2 class="skills-header">Backend &nbsp; <i class="fa-brands fa-node"></i>  &nbsp; ‣  &nbsp; <i class="fa-brands fa-php"></i></h2>
           <p class="skills-text">
             Svakodnevno koristim NodeJS + Express, iako sam izradio i neke manje
             projektiće u vanilla Nodeu. Znam raditi HTML sanitizaciju, error
@@ -211,7 +214,7 @@
           </p>
         </div>
         <div class="section inactive" id="baze">
-          <h2 class="skills-header">Baze podataka</h2>
+          <h2 class="skills-header">Baze podataka &nbsp; <i class="fa-solid fa-database"></i>  &nbsp; ‣  &nbsp; <i class="fa-solid fa-server"></i></h2>
           <p class="skills-text">
             Najbolje se znam služiti MongoDB + mongoose frameworkom, iako sam s
             Mongom jedno vrijeme radio i bez mongoosea. Svakodnevno
@@ -239,7 +242,7 @@
           </p>
         </div>
         <div class="section inactive" id="dsa">
-          <h2 class="skills-header">DSA</h2>
+          <h2 class="skills-header">DSA &nbsp; &nbsp; <span style="font-family:sans-serif; letter-spacing: normal; font-size: 2.85vmin">log</span> <sub style="font-family:sans-serif; font-size: 2.15vmin">n</sub>  &nbsp;  ‣  &nbsp; ∑ </h2>
           <p class="skills-text">
             Znam riješiti početničke probleme koji se mogu pronaći na Leetcodeu
             i CodeWars (na kojem sam rank 5). Trenutno slušam jedan Udemy tečaj
@@ -251,7 +254,7 @@
           </p>
         </div>
         <div class="section inactive" id="ostalo">
-          <h2 class="skills-header">Ostalo</h2>
+          <h2 class="skills-header">Ostalo &nbsp; <i class="fa-brands fa-git"></i>  &nbsp; ‣  &nbsp; <i class="fa-brands fa-github"></i> &nbsp; ‣  &nbsp; <i class="fa-solid fa-terminal"></i></h2>
           <p class="skills-text">
             Znam se služiti Gitom (također jedan položen tečaj na Udemyju) te u
             nešto manju ruku Githubom jer dosad nisam imao previše potrebe
@@ -281,24 +284,9 @@
       </div>
     </section>
 
-    <div
-      class="testimonials-div-with-heading"
-      data-aos="fade-left"
-      data-aos-delay="250"
-    >
-      <p class="testimonials-div-with-heading-text">
-        Stvarna svjedočanstva kolega iz industrije
-      </p>
-      <section
-        class="testimonials"
-        data-aos="fade-right"
-        data-aos-delay="550"
-      ></section>
-    </div>
-
     <section class="projects-section">
-      <p class="projects-title-text" data-aos="fade-right" data-aos-delay="200">
-        Neki od mojih projekata (klik za detalje!)
+      <p class="projects-title-text">
+        Moji projekti (klik za opis!)
       </p>
 
       <div class="swiper mySwiper">
@@ -343,7 +331,7 @@
           </div>
         </div>
         <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-prev swiper-button-1"></div>
         <div class="swiper-button-next swiper-button-2"></div>
         <div class="swiper-pagination"></div>
       </div>
@@ -583,21 +571,19 @@
       </dialog>
     </section>
 
-    <section class="contact-section">
-      <div class="form-explanation-container">
-        <p>
-          Ako želite stupiti u kontakt sa mnom radi kakvih ponuda, prijedloga
-          ili upita, slobodno ispunite obrazac zdesna. Hvala!
-        </p>
-        <hr class="hr-style-one" />
-        <small
-          >Vaše kontaktne informacije neće biti dostupne nikome osim
-          meni.</small
-        >
-      </div>
+    <div class="testimonials-div-with-heading">
+      <p class="testimonials-div-with-heading-text">
+        Stvarna svjedočanstva
+      </p>
+      <section
+        class="testimonials"
+      ></section>
+    </div>
 
+    <section class="contact-section">
+      
       <div class="form-container">
-        <h2 class="contact-form-title">Pošaljite mi email!</h2>
+        <h2 class="contact-form-title"><i class="fa-solid fa-pen-clip"></i> &nbsp; Pošaljite mi email! &nbsp; <i class="fa-solid fa-feather"></i></h2>
         <form
           class="contact-form"
           action="https://formspree.io/f/xdojrrrl"
