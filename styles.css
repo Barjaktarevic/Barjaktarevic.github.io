@@ -235,7 +235,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: fit-content;
+  min-height: fit-content;
   margin: 0 auto;
   border-top: 4px solid black;
   font-family: "Bangers", cursive;
@@ -866,6 +866,23 @@ footer a:hover {
 
   .small-form-explanation {
     font-size: 2vmin;
+  }
+
+  .snippet:nth-child(1)::after {
+    top: 12vmin;
+    right: -26vmin;
+  }
+
+  .snippet:nth-child(2)::after {
+    top: 10vmin;
+    left: -70vmin;
+    rotate: -20deg;
+  }
+
+  .snippet:nth-child(3)::after {
+    top: 10vmin;
+    right: -20vmin;
+    rotate: 20deg;
   }
 }
 
