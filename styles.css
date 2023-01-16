@@ -869,20 +869,15 @@ footer a:hover {
   }
 
   .snippet:nth-child(1)::after {
-    top: 12vmin;
-    right: -26vmin;
+    display: hidden;
   }
 
   .snippet:nth-child(2)::after {
-    top: 10vmin;
-    left: -70vmin;
-    rotate: -20deg;
+    display: hidden;
   }
 
   .snippet:nth-child(3)::after {
-    top: 10vmin;
-    right: -20vmin;
-    rotate: 20deg;
+    display: hidden;
   }
 }
 
