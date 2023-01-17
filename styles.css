@@ -869,15 +869,15 @@ footer a:hover {
   }
 
   .snippet:nth-child(1)::after {
-    display: hidden;
+    content: "";
   }
 
   .snippet:nth-child(2)::after {
-    display: hidden;
+    content: "";
   }
 
   .snippet:nth-child(3)::after {
-    display: hidden;
+    content: "";
   }
 }
 
